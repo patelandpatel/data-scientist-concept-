@@ -15,46 +15,41 @@ imputed_df = handler.handle_missing_advanced(
 )
 
 
-Data Transformations List & Use Cases
-1. Scaling/Normalization
+## **Data Transformations List & Use Cases**
 
-Min-Max Scaling: When features have different ranges, neural networks, KNN
-Standard Scaling (Z-score): When features follow normal distribution, SVM, logistic regression
-Robust Scaling: When data has outliers
-Unit Vector Scaling: When direction matters more than magnitude
+### **1. Scaling/Normalization**
+- **Min-Max Scaling**: When features have different ranges, neural networks, KNN
+- **Standard Scaling (Z-score)**: When features follow normal distribution, SVM, logistic regression
+- **Robust Scaling**: When data has outliers
+- **Unit Vector Scaling**: When direction matters more than magnitude
 
-2. Distribution Transformations
+### **2. Distribution Transformations**
+- **Log Transformation**: Right-skewed data, multiplicative relationships
+- **Square Root**: Moderate skewness, count data
+- **Box-Cox**: Automatically find best power transformation
+- **Yeo-Johnson**: Like Box-Cox but handles negative values
 
-Log Transformation: Right-skewed data, multiplicative relationships
-Square Root: Moderate skewness, count data
-Box-Cox: Automatically find best power transformation
-Yeo-Johnson: Like Box-Cox but handles negative values
+### **3. Encoding Categorical Variables**
+- **One-Hot Encoding**: Nominal categories, tree-based models
+- **Label Encoding**: Ordinal categories, memory constraints
+- **Target Encoding**: High cardinality categories, boosting models
+- **Binary Encoding**: High cardinality with memory efficiency
 
-3. Encoding Categorical Variables
+### **4. Feature Engineering**
+- **Polynomial Features**: Capture non-linear relationships
+- **Interaction Terms**: When features interact meaningfully
+- **Binning/Discretization**: Convert continuous to categorical
+- **Date/Time Features**: Extract components from datetime
 
-One-Hot Encoding: Nominal categories, tree-based models
-Label Encoding: Ordinal categories, memory constraints
-Target Encoding: High cardinality categories, boosting models
-Binary Encoding: High cardinality with memory efficiency
+### **5. Outlier Treatment**
+- **Winsorization**: Cap extreme values
+- **IQR-based Clipping**: Remove statistical outliers
+- **Isolation Forest**: Detect complex outliers
 
-4. Feature Engineering
-
-Polynomial Features: Capture non-linear relationships
-Interaction Terms: When features interact meaningfully
-Binning/Discretization: Convert continuous to categorical
-Date/Time Features: Extract components from datetime
-
-5. Outlier Treatment
-
-Winsorization: Cap extreme values
-IQR-based Clipping: Remove statistical outliers
-Isolation Forest: Detect complex outliers
-
-6. Dimensionality Reduction
-
-PCA: Linear relationships, noise reduction
-t-SNE: Visualization, non-linear patterns
-Feature Selection: Remove irrelevant features
+### **6. Dimensionality Reduction**
+- **PCA**: Linear relationships, noise reduction
+- **t-SNE**: Visualization, non-linear patterns
+- **Feature Selection**: Remove irrelevant features
 
 ## **Summary: When to Use Each Transformation**
 
